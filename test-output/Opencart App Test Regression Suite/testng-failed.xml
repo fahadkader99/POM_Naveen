@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT" verbose="4">
+  <listeners>
+    <listener class-name="com.qa.opencart.extentreport.TestListener"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Registration Page test (failed)" verbose="4">
+    <classes>
+      <class name="com.qa.opencart.tests.RegisterPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="regSetup"/>
+          <include name="userRegisterTest" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.RegisterPageTest -->
+    </classes>
+  </test> <!-- Registration Page test (failed) -->
+  <test thread-count="4" parallel="tests" name="Accounts Page test (failed)" verbose="4">
+    <classes>
+      <class name="com.qa.opencart.tests.AccountPageTest">
+        <methods>
+          <include name="accPageHeaderTest"/>
+          <include name="accPageTitleTest"/>
+          <include name="accPageSetUp"/>
+          <include name="setUp"/>
+          <include name="accPageHeaderCountTest"/>
+          <include name="logoutLinkExist"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.AccountPageTest -->
+    </classes>
+  </test> <!-- Accounts Page test (failed) -->
+  <test thread-count="4" parallel="tests" name="ProductInfo Page test (failed)" verbose="4">
+    <classes>
+      <class name="com.qa.opencart.tests.ProductInfo_DataDrivenTest">
+        <methods>
+          <include name="productInfoTest"/>
+          <include name="productInfoSetup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.ProductInfo_DataDrivenTest -->
+    </classes>
+  </test> <!-- ProductInfo Page test (failed) -->
+</suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

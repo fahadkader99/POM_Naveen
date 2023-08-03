@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart App Test Regression Suite" thread-count="3"
+	parallel="tests" verbose="4">
+
+	<test name="Login Page test ">
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="Accounts Page test ">
+		<classes>
+			<class name="com.qa.opencart.tests.AccountPageTest" />
+		</classes>
+	</test>
+
+	<test name="ProductInfo Page test ">
+		<classes>
+			<class name="com.qa.opencart.tests.ProductInfo_DataDrivenTest" />
+		</classes>
+	</test>
+
+	<test name="ProductInfo Page test ">
+		<classes>
+			<class name="com.qa.opencart.tests.RegisterPageTest" />
+		</classes>
+	</test>
+
+	<!--We can run the whole class & it will run all the method in the class or we can mention the class & the method we want to run-->
+	<!-- So this runner file will run 3 classes back to back as a runner file -->
+	<!-- verbose, min value is 1 & max is 10. Verbous will give some testng
+	necessary info in the console log , better to user 3 or 4-->
+	<!-- thread-count="3" parallel="tests"  >>>>> this is how we can run parallel
+	test || Each thread will open 1 browser launch so the more the thread the
+	more pressure on RAM 
+	so do not put 50 threat if I have 50 class running as runner, choose 3-5 & they
+	will dynamically pick up class in a queue -->
+
+
+</suite>
